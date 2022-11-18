@@ -2,9 +2,13 @@
 
 <ul>
   <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
+    <div class="card" style="width: 18rem; height: 10rem">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to article.title, article %></h5>
+        <p class="card-text"><%= article.body %></p>
+      </div>
+    </div>
+    <br>
   <% end %>
 </ul>
 
